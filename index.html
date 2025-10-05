@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harichandra Chaudhari - Software Engineer in Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Simple test to verify JavaScript is working
+        console.log('HTML script test - JavaScript is working');
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, elements should be available now');
+            console.log('Contact section:', document.getElementById('contact'));
+        });
+        </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">HC</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#journey" class="nav-link">Journey</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#learning" class="nav-link">Learning</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title fade-in">Hi, I'm <span class="highlight">Harichandra Chaudhari</span></h1>
+                <h2 class="hero-subtitle fade-in-delay-1">Turning automation into an art form.</h2>
+                <p class="hero-description fade-in-delay-2">
+                    I build robust, scalable automation frameworks that make testing faster, smarter, and less painful. 
+                    With 4+ years in fintech and Salesforce, I specialize in UI, API, and Mobile Automation Testing, 
+                    integrating CI/CD pipelines for seamless deployments. When I'm not automating workflows, I explore AI, 
+                    cutting-edge tech, and clever coding hacks. Let's automate the world, one test at a time!
+                </p>
+                <div class="hero-cta fade-in-delay-3">
+                    <button class="cta-button" data-tooltip="Scroll down to see my journey & projects.">
+                        See My Work in Action
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <div class="code-line">
+                        <span class="code-keyword">automation</span>
+                        <span class="code-operator">.</span>
+                        <span class="code-method">buildFramework</span>
+                        <span class="code-bracket">()</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">testing</span>
+                        <span class="code-operator">.</span>
+                        <span class="code-method">makeSmarter</span>
+                        <span class="code-bracket">()</span>
+                    </div>
+                    <div class="code-line">
+                        <span class="code-keyword">world</span>
+                        <span class="code-operator">.</span>
+                        <span class="code-method">automate</span>
+                        <span class="code-bracket">()</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section id="journey" class="journey">
+        <div class="container">
+            <h2 class="section-title">My Journey</h2>
+            <div class="journey-content">
+                <p class="journey-story">
+                    Born in Chalisgaon, Maharashtra, I started with Mechanical Engineering, but my real love was always 
+                    software and automation. After graduation, I completed industrial training at 
+                    <span class="highlight-text" data-tooltip="Manual Testing + SQL + Automation basics">QSpiders</span> 
+                    in Manual Testing, SQL, and Automation basics. Later, I upskilled at 
+                    <span class="highlight-text" data-tooltip="DSA + LLD + Software Design Principles">Scaler</span>, 
+                    mastering Data Structures, Low-Level Design (LLD), and Software Design Principles, guiding my design 
+                    of robust and scalable automation frameworks. My professional journey led me to fintech and Salesforce 
+                    domains, where I architect frameworks at Smallcase Technologies to automate real-user logins, 
+                    end-to-end order flows, and multi-platform testing. Today, my work blends engineering precision, 
+                    automation expertise, and curiosity for AI and emerging tech.
+                </p>
+                <div class="timeline">
+                    <div class="timeline-item slide-in-left">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Mechanical Engineering</h3>
+                            <p>Foundation in problem-solving and systematic thinking</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item slide-in-right">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>QSpiders Training</h3>
+                            <p>SDLC, STLC, Agile, Manual Testing, SQL, and Automation basics</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item slide-in-left">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Professional Journey</h3>
+                            <p>Fintech and Salesforce automation expertise</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item slide-in-right">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Scaler Upskilling</h3>
+                            <p>DSA, LLD, and Software Design Principles</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="journey-cta">
+                    <p class="micro-copy">Curious how I got here? Keep scrolling…</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <h2 class="section-title">Experience & Work Highlights</h2>
+            <div class="experience-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">Automation Scripts</div>
+                </div>
+            </div>
+            <div class="experience-cards">
+                <div class="experience-card">
+                    <div class="card-header">
+                        <h3>Smallcase Technologies</h3>
+                        <span class="duration">Jan 2024 – Present</span>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Built scalable automation frameworks using Playwright, Java, TestNG, POM</li>
+                            <li>Integrated automation with CI/CD pipelines (Jenkins)</li>
+                            <li>Implemented secure broker login automation using TOTP</li>
+                            <li>Conducted functional, regression, exploratory testing across web, mobile web, mobile apps</li>
+                            <li>Applied LLD and software design principles for maintainable frameworks</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag" data-tooltip="Web automation">Playwright</span>
+                            <span class="tech-tag" data-tooltip="Programming language">Java</span>
+                            <span class="tech-tag" data-tooltip="Testing framework">TestNG</span>
+                            <span class="tech-tag" data-tooltip="CI/CD integration">Jenkins</span>
+                            <span class="tech-tag" data-tooltip="Design pattern">POM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience-card">
+                    <div class="card-header">
+                        <h3>Bebo Technologies</h3>
+                        <span class="duration">Sep 2021 – Jan 2024</span>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Developed Selenium automation scripts with POM and Data-Driven Design</li>
+                            <li>Executed functional, integration, regression testing and defect tracking in Jira</li>
+                            <li>Applied manual testing and SQL skills from QSpiders training</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span class="tech-tag" data-tooltip="Web automation">Selenium</span>
+                            <span class="tech-tag" data-tooltip="Design pattern">POM</span>
+                            <span class="tech-tag" data-tooltip="Database">SQL</span>
+                            <span class="tech-tag" data-tooltip="Issue tracking">Jira</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-cta">
+                <p class="micro-copy">Want the full behind-the-scenes? Check my projects below.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Personal Automation Projects</h2>
+            <p class="section-subtitle">I build side projects to experiment, learn, and innovate.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>End-to-End E-commerce Automation</h3>
+                        <div class="project-links">
+                            <a href="#" class="github-link" data-tooltip="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Automates product search, cart, checkout flows on a demo e-commerce site with reusable components
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">TestNG</span>
+                        <span class="tech-tag">POM</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>API Automation for Banking Services</h3>
+                        <div class="project-links">
+                            <a href="#" class="github-link" data-tooltip="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Automates REST API validations for authentication, CRUD operations, response validations; integrated into CI/CD pipelines
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">RestAssured</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Postman</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Demo Mobile App Automation</h3>
+                        <div class="project-links">
+                            <a href="#" class="github-link" data-tooltip="View on GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        Automates login, data entry, and core flows on a demo mobile app using Playwright and emulators
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">TestNG</span>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-cta">
+                <p class="micro-copy">See more experiments on my <a href="https://github.com/harichandra-github" class="inline-link">GitHub →</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Learning & Goals Section -->
+    <section id="learning" class="learning">
+        <div class="container">
+            <h2 class="section-title">Learning & Goals</h2>
+            <div class="learning-content">
+                <div class="learning-goal">
+                    <h3>Goal</h3>
+                    <p>"Build future-ready automation frameworks where testing is efficient, intelligent, and almost effortless."</p>
+                </div>
+                <div class="learning-areas">
+                    <div class="learning-item">
+                        <div class="learning-header">
+                            <h4>AI in Automation</h4>
+                            <div class="progress-circle" data-progress="75">
+                                <span class="progress-text">75%</span>
+                            </div>
+                        </div>
+                        <p>Smarter test generation, predictive validation</p>
+                    </div>
+                    <div class="learning-item">
+                        <div class="learning-header">
+                            <h4>Advanced Automation Tools</h4>
+                            <div class="progress-circle" data-progress="85">
+                                <span class="progress-text">85%</span>
+                            </div>
+                        </div>
+                        <p>Playwright MCP, mobile & API automation</p>
+                    </div>
+                    <div class="learning-item">
+                        <div class="learning-header">
+                            <h4>Software Design Principles</h4>
+                            <div class="progress-circle" data-progress="80">
+                                <span class="progress-text">80%</span>
+                            </div>
+                        </div>
+                        <p>LLD, clean coding</p>
+                    </div>
+                    <div class="learning-item">
+                        <div class="learning-header">
+                            <h4>CI/CD Integration</h4>
+                            <div class="progress-circle" data-progress="90">
+                                <span class="progress-text">90%</span>
+                            </div>
+                        </div>
+                        <p>Jenkins pipelines</p>
+                    </div>
+                </div>
+            </div>
+            <div class="learning-cta">
+                <p class="micro-copy">Want to build smarter automation with me? Let's connect.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Download Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Download Resume</h2>
+            <div class="resume-content">
+                <div class="resume-info">
+                    <h3>Get My Complete Profile</h3>
+                    <p>Download my detailed resume to learn more about my automation expertise, technical skills, and professional achievements. Perfect for recruiters and hiring managers.</p>
+                    <div class="resume-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>4+ Years Experience</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fintech & Salesforce</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Automation Frameworks</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CI/CD Integration</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="resume-download">
+                    <div class="resume-preview">
+                        <div class="resume-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="resume-details">
+                            <h4>Harichandra_Chaudhari_Resume.pdf</h4>
+                            <p>Updated: October 2024</p>
+                            <span class="file-size">2.1 MB</span>
+                        </div>
+                    </div>
+                    <button class="download-button" id="downloadResume" data-tooltip="Left-click: View in Google Drive | Right-click: Direct download">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                        <div class="download-progress"></div>
+                    </button>
+                    <p class="download-note">PDF format • Print-ready • Mobile-friendly • <span style="color: var(--primary-color); font-weight: 500;">Right-click for direct download</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links & Profiles Section -->
+    <section class="links">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <div class="links-grid">
+                <a href="https://linkedin.com/in/harichandra-chaudhari" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p>Professional network</p>
+                </a>
+                <a href="https://github.com/harichandra-github" class="link-card" target="_blank">
+                    <div class="link-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>Code repositories</p>
+                </a>
+                <a href="mailto:harichandrachaudhari21@gmail.com" class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>harichandrachaudhari21@gmail.com</p>
+                </a>
+            </div>
+            <div class="links-cta">
+                <p class="micro-copy">Ideas, questions, or collabs? I read every message personally!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST"> 
+                <!-- Hidden fields for Web3Forms -->
+                <input type="hidden" name="access_key" value="94f3dd61-d58a-4643-a26a-3a39a576c6df" />
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+                <input type="hidden" name="redirect" value="http://localhost:8000/#contact">
+                
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+            <div class="contact-cta">
+                <p class="micro-copy">No spam. Just cool tech conversations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Harichandra Chaudhari. Built with passion for automation.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
