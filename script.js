@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initTooltips();
     initSmoothScrolling();
     initParallaxEffects();
+    initThemeToggle(); // Add this line
 });
     
 
@@ -37,11 +38,22 @@ function initNavigation() {
     // Navbar scroll effect
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        
         if (window.scrollY > 100) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            if (currentTheme === 'dark') {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
         } else {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            if (currentTheme === 'dark') {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
             navbar.style.boxShadow = 'none';
         }
     });
@@ -92,6 +104,13 @@ function initScrollAnimations() {
     // Observe elements for scroll animations
     const animateElements = document.querySelectorAll('.timeline-item, .experience-card, .project-card, .learning-item, .link-card, .resume-download');
     animateElements.forEach(el => {
+        el.classList.add('animate-on-scroll');
+        observer.observe(el);
+    });
+    
+    // Separate subtle animation for skill categories
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach(el => {
         el.classList.add('animate-on-scroll');
         observer.observe(el);
     });
@@ -338,15 +357,6 @@ function initContactForm() {
     const submitButton = form.querySelector('.submit-button');
     let isSubmitting = false; // Prevent double submission
     
-
-    // Store original form attributes
-    const originalAction = form.action;
-    const originalMethod = form.method;
-    
-    // Remove form action and method to prevent default submission
-    form.action = '';
-    form.method = 'GET';
-    
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -375,19 +385,11 @@ function initContactForm() {
                 console.log(key, value);
             }
             
-            // Create AbortController for timeout
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-            
-            const response = await fetch(originalAction, {
+            const response = await fetch(form.action, {
                 method: "POST",
                 body: formData,
-                mode: "no-cors",
-                signal: controller.signal,
             });
             
-            clearTimeout(timeoutId);
-
             // Debug: Log response
             console.log('Response status:', response.status);
             console.log('Response ok:', response.ok);
@@ -916,3 +918,80 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Theme toggle functionality
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;
+    
+    // Check for saved theme preference or default to 'light'
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', currentTheme);
+    
+    // Update icon based on current theme
+    updateThemeIcon(currentTheme);
+    
+    // Update navbar on initial load
+    updateNavbarTheme(currentTheme);
+    
+    if (themeToggle) {
+        themeToggle.addEventListener('click', function() {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            // Set new theme
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            
+            // Update icon
+            updateThemeIcon(newTheme);
+            
+            // Update navbar immediately
+            updateNavbarTheme(newTheme);
+            
+            // Add animation
+            this.style.transform = 'rotate(360deg) scale(1.2)';
+            setTimeout(() => {
+                this.style.transform = '';
+            }, 300);
+        });
+    }
+}
+
+function updateThemeIcon(theme) {
+    const themeToggle = document.getElementById('themeToggle');
+    if (themeToggle) {
+        const icon = themeToggle.querySelector('i');
+        if (theme === 'dark') {
+            icon.classList.remove('fa-moon');
+            icon.classList.add('fa-sun');
+        } else {
+            icon.classList.remove('fa-sun');
+            icon.classList.add('fa-moon');
+        }
+    }
+}
+
+function updateNavbarTheme(theme) {
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        const scrollY = window.scrollY;
+        
+        if (scrollY > 100) {
+            if (theme === 'dark') {
+                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.4)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+        } else {
+            if (theme === 'dark') {
+                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
+            } else {
+                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+            navbar.style.boxShadow = 'none';
+        }
+    }
+}

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <title>Harichandra Chaudhari - Software Engineer in Test</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -10,12 +11,13 @@
     <script>
         // Simple test to verify JavaScript is working
         console.log('HTML script test - JavaScript is working');
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             console.log('DOM loaded, elements should be available now');
             console.log('Contact section:', document.getElementById('contact'));
         });
-        </script>
+    </script>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
@@ -23,15 +25,23 @@
             <div class="nav-logo">
                 <span class="logo-text">HC</span>
             </div>
+            <!-- Add this theme toggle button -->
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon"></i>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#journey" class="nav-link">Journey</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#learning" class="nav-link">Learning</a></li>
                 <li><a href="#resume" class="nav-link">Resume</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
+           
+            
+            
             <div class="hamburger">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -47,9 +57,10 @@
                 <h1 class="hero-title fade-in">Hi, I'm <span class="highlight">Harichandra Chaudhari</span></h1>
                 <h2 class="hero-subtitle fade-in-delay-1">Turning automation into an art form.</h2>
                 <p class="hero-description fade-in-delay-2">
-                    I build robust, scalable automation frameworks that make testing faster, smarter, and less painful. 
-                    With 4+ years in fintech and Salesforce, I specialize in UI, API, and Mobile Automation Testing, 
-                    integrating CI/CD pipelines for seamless deployments. When I'm not automating workflows, I explore AI, 
+                    I build robust, scalable automation frameworks that make testing faster, smarter, and less painful.
+                    With 4+ years in fintech and Salesforce, I specialize in UI, API, and Mobile Automation Testing,
+                    integrating CI/CD pipelines for seamless deployments. When I'm not automating workflows, I explore
+                    AI,
                     cutting-edge tech, and clever coding hacks. Let's automate the world, one test at a time!
                 </p>
                 <div class="hero-cta fade-in-delay-3">
@@ -93,15 +104,18 @@
             <h2 class="section-title">My Journey</h2>
             <div class="journey-content">
                 <p class="journey-story">
-                    Born in Chalisgaon, Maharashtra, I started with Mechanical Engineering, but my real love was always 
-                    software and automation. After graduation, I completed industrial training at 
-                    <span class="highlight-text" data-tooltip="Manual Testing + SQL + Automation basics">QSpiders</span> 
-                    in Manual Testing, SQL, and Automation basics. Later, I upskilled at 
-                    <span class="highlight-text" data-tooltip="DSA + LLD + Software Design Principles">Scaler</span>, 
-                    mastering Data Structures, Low-Level Design (LLD), and Software Design Principles, guiding my design 
-                    of robust and scalable automation frameworks. My professional journey led me to fintech and Salesforce 
-                    domains, where I architect frameworks at Smallcase Technologies to automate real-user logins, 
-                    end-to-end order flows, and multi-platform testing. Today, my work blends engineering precision, 
+                    Born in Chalisgaon, Maharashtra, I started with Mechanical Engineering, but my real love was always
+                    software and automation.
+                    After graduation, I completed industrial training at
+                    <span class="highlight-text" data-tooltip="Manual Testing + SQL + Automation basics">QSpiders</span>
+                    in Manual Testing, SQL, and Automation basics.
+                    Later, I upskilled at
+                    <span class="highlight-text" data-tooltip="DSA + LLD + Software Design Principles">Scaler</span>,
+                    mastering Data Structures, Low-Level Design (LLD), and Software Design Principles, guiding my design
+                    of robust and scalable automation frameworks.
+                    My professional journey led me to fintech and Salesforce domains, where I architect frameworks at
+                    Smallcase Technologies to automate real-user logins,
+                    end-to-end order flows, and multi-platform testing. Today, my work blends engineering precision,
                     automation expertise, and curiosity for AI and emerging tech.
                 </p>
                 <div class="timeline">
@@ -170,7 +184,8 @@
                             <li>Built scalable automation frameworks using Playwright, Java, TestNG, POM</li>
                             <li>Integrated automation with CI/CD pipelines (Jenkins)</li>
                             <li>Implemented secure broker login automation using TOTP</li>
-                            <li>Conducted functional, regression, exploratory testing across web, mobile web, mobile apps</li>
+                            <li>Conducted functional, regression, exploratory testing across web, mobile web, mobile
+                                apps</li>
                             <li>Applied LLD and software design principles for maintainable frameworks</li>
                         </ul>
                         <div class="tech-stack">
@@ -208,6 +223,134 @@
         </div>
     </section>
 
+    <!-- Technical Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <p class="section-subtitle">Technologies and tools I work with to build robust automation solutions</p>
+            
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+
+                <!-- Automation & Testing -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>Automation & Testing</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Playwright</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">TestNG</span>
+                        <span class="skill-tag">JUnit</span>
+                        <span class="skill-tag">RestAssured</span>
+                        <span class="skill-tag">Cucumber</span>
+                        <span class="skill-tag">Appium</span>
+                    </div>
+                </div>
+
+                <!-- Build Tools & Frameworks -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Build Tools & Frameworks</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Maven</span>
+                        <span class="skill-tag">Gradle</span>
+                        <span class="skill-tag">POM Pattern</span>
+                        <span class="skill-tag">Page Factory</span>
+                        <span class="skill-tag">Data-Driven</span>
+                    </div>
+                </div>
+
+                <!-- CI/CD & DevOps -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-infinity"></i>
+                        <h3>CI/CD & DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GitLab CI</span>
+                    </div>
+                </div>
+
+                <!-- API & Web Services -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>API & Web Services</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Swagger</span>
+                        <span class="skill-tag">JSON</span>
+                        <span class="skill-tag">XML</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+
+                <!-- Reporting & Logging -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Reporting & Logging</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Extent Reports</span>
+                        <span class="skill-tag">Allure</span>
+                        <span class="skill-tag">Log4j2</span>
+                        <span class="skill-tag">TestNG Reports</span>
+                    </div>
+                </div>
+
+                <!-- Project Management -->
+                <div class="skill-category">
+                    <div class="category-header">
+                        <i class="fas fa-tasks"></i>
+                        <h3>Project Management</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JIRA</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Confluence</span>
+                        <span class="skill-tag">Test Management</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -216,62 +359,95 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>End-to-End E-commerce Automation</h3>
+                        <h3 class="project-title">
+                                <a href="https://github.com/harichandra-github/playwrightAutomationProject" target="_blank"
+                                rel="noopener noreferrer" class="project-title-link">
+                            End-to-End E-commerce Automation
+                            </a>
+                        </h3>
                         <div class="project-links">
-                            <a href="#" class="github-link" data-tooltip="View on GitHub">
+                            <a href="https://github.com/harichandra-github/playwrightAutomationProject"
+                                class="github-link" target="_blank" data-tooltip="View on GitHub">
                                 <i class="fab fa-github"></i>
+
                             </a>
                         </div>
                     </div>
                     <p class="project-description">
-                        Automates product search, cart, checkout flows on a demo e-commerce site with reusable components
+                        Automates product search, cart, checkout flows on a demo e-commerce site with reusable
+                        components
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Playwright</span>
                         <span class="tech-tag">Java</span>
                         <span class="tech-tag">TestNG</span>
                         <span class="tech-tag">POM</span>
+                        <span class="tech-tag">Extent Reports</span>
+                        <span class="tech-tag">Log4j2</span>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>API Automation for Banking Services</h3>
+                        <h3 class="project-title">
+                            <a href="https://github.com/harichandra-github/api-restassured-automation" target="_blank"
+                                rel="noopener noreferrer" class="project-title-link">
+
+                                REST Assured API Automation Framework
+                            </a>
+                        </h3>
                         <div class="project-links">
-                            <a href="#" class="github-link" data-tooltip="View on GitHub">
+                            <a href="https://github.com/harichandra-github/api-restassured-automation"
+                                class="github-link" target="_blank" data-tooltip="View on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
                     <p class="project-description">
-                        Automates REST API validations for authentication, CRUD operations, response validations; integrated into CI/CD pipelines
+                        Automates REST API validations for authentication, CRUD operations, response validations;
+                        integrated into CI/CD pipelines
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">RestAssured</span>
                         <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Postman</span>
+                        <span class="tech-tag">TestNG</span>
+                        <span class="tech-tag">Extent Reports</span>
+                        <span class="tech-tag">Jackson</span>
+                        <span class="tech-tag">Log4j2</span>
+                        <span class="tech-tag">Lombok</span>
+                        <span class="tech-tag">Java Faker</span>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Demo Mobile App Automation</h3>
+                        <h3 class="project-title">
+                            <a href="https://github.com/harichandra-github/selenium_Framework" target="_blank"
+                                rel="noopener noreferrer" class="project-title-link">
+
+                                Selenium End-to-End E-commerce Automation
+                            </a>
+                        </h3>
                         <div class="project-links">
-                            <a href="#" class="github-link" data-tooltip="View on GitHub">
+                            <a href="https://github.com/harichandra-github/selenium_Framework" class="github-link" data-tooltip="View on GitHub">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
                     </div>
                     <p class="project-description">
-                        Automates login, data entry, and core flows on a demo mobile app using Playwright and emulators
-                    </p>
+                        Automates product search, cart, checkout flows on a demo e-commerce site with reusable
+                        components
                     <div class="project-tech">
-                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Selenium</span>
                         <span class="tech-tag">Java</span>
                         <span class="tech-tag">TestNG</span>
+                        <span class="tech-tag">POM</span>
+                        <span class="tech-tag">Extent Reports</span>
+                        <span class="tech-tag">Log4j2</span>
                     </div>
                 </div>
             </div>
             <div class="projects-cta">
-                <p class="micro-copy">See more experiments on my <a href="https://github.com/harichandra-github" class="inline-link">GitHub →</a></p>
+                <p class="micro-copy">See more experiments on my <a href="https://github.com/harichandra-github"
+                        class="inline-link">GitHub →</a></p>
             </div>
         </div>
     </section>
@@ -283,7 +459,8 @@
             <div class="learning-content">
                 <div class="learning-goal">
                     <h3>Goal</h3>
-                    <p>"Build future-ready automation frameworks where testing is efficient, intelligent, and almost effortless."</p>
+                    <p>"Build future-ready automation frameworks where testing is efficient, intelligent, and almost
+                        effortless."</p>
                 </div>
                 <div class="learning-areas">
                     <div class="learning-item">
@@ -337,7 +514,8 @@
             <div class="resume-content">
                 <div class="resume-info">
                     <h3>Get My Complete Profile</h3>
-                    <p>Download my detailed resume to learn more about my automation expertise, technical skills, and professional achievements. Perfect for recruiters and hiring managers.</p>
+                    <p>Download my detailed resume to learn more about my automation expertise, technical skills, and
+                        professional achievements. Perfect for recruiters and hiring managers.</p>
                     <div class="resume-features">
                         <div class="feature-item">
                             <i class="fas fa-check-circle"></i>
@@ -364,16 +542,19 @@
                         </div>
                         <div class="resume-details">
                             <h4>Harichandra_Chaudhari_Resume.pdf</h4>
-                            <p>Updated: October 2024</p>
-                            <span class="file-size">2.1 MB</span>
+                            <p>Updated: October 2025</p>
+                            <span class="file-size">47.0 KB</span>
                         </div>
                     </div>
-                    <button class="download-button" id="downloadResume" data-tooltip="Left-click: View in Google Drive | Right-click: Direct download">
+                    <button class="download-button" id="downloadResume"
+                        data-tooltip="Left-click: View in Google Drive | Right-click: Direct download">
                         <i class="fas fa-download"></i>
                         <span>Download Resume</span>
                         <div class="download-progress"></div>
                     </button>
-                    <p class="download-note">PDF format • Print-ready • Mobile-friendly • <span style="color: var(--primary-color); font-weight: 500;">Right-click for direct download</span></p>
+                    <p class="download-note">PDF format • Print-ready • Mobile-friendly • <span
+                            style="color: var(--primary-color); font-weight: 500;">Right-click for direct
+                            download</span></p>
                 </div>
             </div>
         </div>
@@ -416,13 +597,12 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title">Get In Touch</h2>
-            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST"> 
+            <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
                 <!-- Hidden fields for Web3Forms -->
                 <input type="hidden" name="access_key" value="94f3dd61-d58a-4643-a26a-3a39a576c6df" />
                 <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
-                <input type="hidden" name="redirect" value="http://localhost:8000/#contact">
-                
-                
+
+
                 <div class="form-group">
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" required>
@@ -455,4 +635,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
