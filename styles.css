@@ -517,6 +517,59 @@ section {
     font-size: 1.5rem;
 }
 
+.card-role {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-role strong {
+    color: var(--text-primary);
+}
+
+.experience-overview {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.experience-overview p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.contribution-title {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+}
+
+.contribution-section {
+    margin-bottom: 1.5rem;
+}
+
+.contribution-section h5 {
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.contribution-section h5::before {
+    content: '▸';
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
 .duration {
     background: var(--gradient-primary);
     color: white;
@@ -657,6 +710,16 @@ section {
     color: var(--text-secondary);
     border-color: var(--border-color);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode styles for experience */
+:root[data-theme="dark"] .experience-overview {
+    background: var(--bg-dark);
+    border-left-color: var(--primary-color);
+}
+
+:root[data-theme="dark"] .card-role {
+    border-bottom-color: var(--border-color);
 }
 
 /* Projects Section */
@@ -1556,6 +1619,19 @@ section,
         font-size: 1.3rem;
     }
     
+    .contribution-title {
+        font-size: 1rem;
+    }
+    
+    .contribution-section h5 {
+        font-size: 0.95rem;
+    }
+    
+    .experience-overview {
+        padding: 0.85rem;
+        font-size: 0.95rem;
+    }
+    
     .nav-container {
         padding: 0 1rem;
     }
@@ -1619,6 +1695,23 @@ section,
     
     .card-header h3 {
         font-size: 1.2rem;
+    }
+    
+    .contribution-title {
+        font-size: 0.95rem;
+    }
+    
+    .contribution-section h5 {
+        font-size: 0.9rem;
+    }
+    
+    .experience-overview {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .card-role {
+        font-size: 0.9rem;
     }
     
     .stat-number {
