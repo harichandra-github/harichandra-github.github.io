@@ -180,9 +180,9 @@ function initResumeDownload() {
     
     // Configurable resume link
     const resumeConfig = {
-        googleDriveLink: 'https://drive.google.com/file/d/1kL-blJCewaMVdo4Ie_kU3Ojd9nm81sbW/view?usp=sharing',
-        directDownloadLink: 'https://drive.google.com/uc?export=download&id=1kL-blJCewaMVdo4Ie_kU3Ojd9nm81sbW',
-        fileName: 'Harichandra_Chaudhari_Resume.pdf'
+        googleDriveLink: 'https://lnk.ink/hari-cv',
+        directDownloadLink: 'https://lnk.ink/hari-cv',
+        fileName: 'Harichandra_SDET_4+YOE_Resume.pdf'
     };
     
     if (downloadButton) {
