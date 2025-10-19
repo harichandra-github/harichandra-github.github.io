@@ -182,7 +182,7 @@ function initResumeDownload() {
     const resumeConfig = {
         googleDriveLink: 'https://lnk.ink/hari-cv',
         directDownloadLink: 'https://lnk.ink/hari-cv',
-        fileName: 'Harichandra_SDET_4+YOE_Resume.pdf'
+        fileName: 'Harichandra_4+YOE_SDET_Resume.pdf'
     };
     
     if (downloadButton) {
