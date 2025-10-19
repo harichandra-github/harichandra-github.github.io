@@ -868,9 +868,9 @@ function initSocialLinkTracking() {
     linkedinLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'social_click', {
+                gtag('event', 'linkedin_click', {
                     'event_category': 'Social Media',
-                    'event_label': 'LinkedIn',
+                    'platform': 'LinkedIn',
                     'value': 1
                 });
             }
@@ -882,9 +882,9 @@ function initSocialLinkTracking() {
     githubLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'social_click', {
+                gtag('event', 'github_click', {
                     'event_category': 'Social Media',
-                    'event_label': 'GitHub',
+                    'platform': 'GitHub',
                     'value': 1
                 });
             }
@@ -896,9 +896,9 @@ function initSocialLinkTracking() {
     emailLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (typeof gtag !== 'undefined') {
-                gtag('event', 'contact_click', {
+                gtag('event', 'email_click', {
                     'event_category': 'Contact',
-                    'event_label': 'Email Link',
+                    'contact_method': 'Email',
                     'value': 1
                 });
             }
