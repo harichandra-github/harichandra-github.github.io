@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initTooltips();
     initSmoothScrolling();
     initParallaxEffects();
-    initThemeToggle(); // Add this line
+    initThemeToggle();
+    initSocialLinkTracking(); // Add tracking for social links
 });
     
 
@@ -187,6 +188,15 @@ function initResumeDownload() {
     
     if (downloadButton) {
         downloadButton.addEventListener('click', function() {
+            // Track resume download in Google Analytics
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'resume_download', {
+                    'event_category': 'Resume',
+                    'event_label': 'Download Button Click',
+                    'value': 1
+                });
+            }
+            
             // Show downloading state
             this.classList.add('downloading');
             this.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Opening Resume...</span><div class="download-progress"></div>';
@@ -228,6 +238,15 @@ function initResumeDownload() {
         downloadButton.addEventListener('contextmenu', function(e) {
             e.preventDefault();
             if (!this.disabled) {
+                // Track right-click direct download
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'resume_download_direct', {
+                        'event_category': 'Resume',
+                        'event_label': 'Right-Click Direct Download',
+                        'value': 1
+                    });
+                }
+                
                 // Show direct download option
                 this.classList.add('downloading');
                 this.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Downloading...</span><div class="download-progress"></div>';
@@ -841,6 +860,54 @@ function safeQuerySelector(selector) {
         return null;
     }
 }
+
+// Track social media and external link clicks
+function initSocialLinkTracking() {
+    // Track LinkedIn clicks
+    const linkedinLinks = document.querySelectorAll('a[href*="linkedin.com"]');
+    linkedinLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'social_click', {
+                    'event_category': 'Social Media',
+                    'event_label': 'LinkedIn',
+                    'value': 1
+                });
+            }
+        });
+    });
+    
+    // Track GitHub clicks
+    const githubLinks = document.querySelectorAll('a[href*="github.com"]');
+    githubLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'social_click', {
+                    'event_category': 'Social Media',
+                    'event_label': 'GitHub',
+                    'value': 1
+                });
+            }
+        });
+    });
+    
+    // Track Email clicks
+    const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+    emailLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'contact_click', {
+                    'event_category': 'Contact',
+                    'event_label': 'Email Link',
+                    'value': 1
+                });
+            }
+        });
+    });
+}
+
+// Initialize social link tracking
+document.addEventListener('DOMContentLoaded', initSocialLinkTracking);
 
 // Initialize all safe elements
 // document.addEventListener('DOMContentLoaded', function() {
