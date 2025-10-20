@@ -1062,3 +1062,59 @@ function updateNavbarTheme(theme) {
         }
     }
 }
+
+// Hero section - Download Resume button (scroll to resume section)
+document.addEventListener('DOMContentLoaded', function() {
+    const heroDownloadBtn = document.getElementById('heroDownloadResume');
+    if (heroDownloadBtn) {
+        heroDownloadBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default button behavior
+            
+            // Track the interaction
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'resume_section_click', {
+                    'event_category': 'Navigation',
+                    'event_label': 'Hero to Resume Section',
+                    'value': 1
+                });
+            }
+            
+            // Smooth scroll to resume section
+            const resumeSection = document.getElementById('resume');
+            if (resumeSection) {
+                resumeSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+});
+
+// Hero section - Get In Touch button (smooth scroll to contact)
+document.addEventListener('DOMContentLoaded', function() {
+    const getInTouchBtn = document.getElementById('heroGetInTouch');
+    if (getInTouchBtn) {
+        getInTouchBtn.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default button behavior
+            
+            // Track the interaction
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'get_in_touch_click', {
+                    'event_category': 'Navigation',
+                    'event_label': 'Hero Section to Contact',
+                    'value': 1
+                });
+            }
+            
+            // Smooth scroll to contact section
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+                contactSection.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    }
+});

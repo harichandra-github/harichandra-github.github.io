@@ -209,47 +209,122 @@ body {
 .hero-description {
     font-size: 1.1rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
 }
 
-.cta-button {
-    background: rgba(255, 255, 255, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: white;
-    padding: 1rem 2rem;
-    font-size: 1.1rem;
+.hero-tech-stack {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tech-label {
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
-    border-radius: 50px;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.hero-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.hero-tech-tag {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+.hero-tech-tag:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    color: white;
+    padding: 0.9rem 1.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    border: 2px solid transparent;
+}
+
+.cta-button.primary {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--primary-color);
+    border-color: rgba(255, 255, 255, 0.95);
+}
+
+.cta-button.primary:hover {
+    background: white;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateY(-3px);
+}
+
+.hero-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.hero-social-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
-.cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s ease;
-}
-
-.cta-button:hover::before {
-    left: 100%;
-}
-
-.cta-button:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.3);
-    border-color: rgba(255, 255, 255, 0.5);
+.hero-social-link:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px) scale(1.1);
 }
 
 .hero-visual {
@@ -1547,6 +1622,45 @@ section,
         font-size: 0.95rem;
         line-height: 1.6;
     }
+    
+    .hero-tech-stack {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .tech-label {
+        font-size: 0.9rem;
+    }
+    
+    .hero-tech-tag {
+        font-size: 0.8rem;
+        padding: 0.35rem 0.75rem;
+    }
+    
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+    
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+        padding: 0.85rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .hero-social {
+        justify-content: center;
+        margin-top: 0.75rem;
+    }
+    
+    .hero-social-link {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
+    }
 
     .timeline::before {
         left: 20px;
@@ -1651,10 +1765,29 @@ section,
         font-size: 0.9rem;
         line-height: 1.6;
     }
+    
+    .hero-tech-stack {
+        margin-bottom: 1.5rem;
+    }
+    
+    .tech-label {
+        font-size: 0.85rem;
+    }
+    
+    .hero-tech-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.7rem;
+    }
 
     .cta-button {
         padding: 0.75rem 1.25rem;
-        font-size: 0.95rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-social-link {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 
     .experience-card,
